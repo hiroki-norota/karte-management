@@ -64,7 +64,7 @@
 |medical_treatment|text||
 |commuting_to_hospital|text||
 |disease_name|text||
-|medication||text||
+|medication|text||
 |chronic_disease|text||
 |chronic_disease_other|text||
 |chronic_disease_medication|text||
