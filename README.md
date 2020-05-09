@@ -2,8 +2,8 @@
 
 ## usersテーブル
 
-｜Colimn｜Type｜Options｜
-｜------｜----｜-------｜
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
@@ -13,10 +13,10 @@
 
 ## userprofilesテーブル
 
-｜Colimn｜Type｜Options｜
-｜------｜----｜-------｜
+|Column|Type|Options|
+|------|----|-------|
 |record_id|integer||
-|name|string|null: false|
+|name1|string|null: false|
 |name2|string|null: false|
 |age|integer|string||
 |gender|string||
@@ -39,8 +39,8 @@
 
 ## medicalrecordsテーブル
 
-｜Colimn｜Type｜Options｜
-｜------｜----｜-------｜
+|Column|Type|Options|
+|------|----|-------|
 |text1|text||
 |text2|text||
 |image1|text||
@@ -53,8 +53,8 @@
 
 ## firstvisitsテーブル
 
-｜Colimn｜Type｜Options｜
-｜------｜----｜-------｜
+|Column|Type|Options|
+|------|----|-------|
 |concern|text||
 |symptom|text||
 |onset|text||
