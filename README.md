@@ -99,7 +99,6 @@
 |overtime|integer||
 |holiday|integer||
 |holiday_other|string||
-
 |head|integer||
 |head_other|string||
 |face|integer||
