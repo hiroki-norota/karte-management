@@ -1,0 +1,11 @@
+.contents
+  .form
+    = form_with(url: search_userprofiles_path, local: true, mrthod: :get, class:"search-form") do |f|
+      = f.text_field :keyword, placeholder: "検索する", class: "search-input"
+      = f.submit '検索', class: 'search-btn'
+  = link_to "#", class: "contents__btn" do
+    新規作成
+  = link_to "#", class: "contents__btn" do
+    住所録
+  = link_to "#", class: "contents__btn" do
+    メール
