@@ -65,7 +65,6 @@
 |commuting_hospital|integer||
 |disease_name|text||
 |medication|text||
-
 |chronic_disease|string||
 |chronic_disease_other|text||
 |chronic_disease_medication|text||
@@ -90,7 +89,6 @@
 |alcohol_intake|integer||
 |alcohol_intake_other|string||
 |tabacco|integer||
-
 |tabacco_other|string||
 |exercise|string||
 |time_of_sleeping|text||
@@ -148,7 +146,6 @@
 |bowei movement_other|string||
 |sleep|integer||
 |sleep_other|string||
-
 |cold|integer||
 |sweating|integer||
 |no_sweat|integer||
