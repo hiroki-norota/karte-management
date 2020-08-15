@@ -1,12 +1,16 @@
 class CreateUserprofiles < ActiveRecord::Migration[6.0]
   def change
     create_table :userprofiles do |t|
-      t.integer :record_id
-      t.string :name1
-      t.string :name2
+      t.string :name1, null: false
+      t.string :name2, null: false
       t.integer :age
-      t.integer :gender
-      t.integer :birthday
+      t.integer :gender, null: false
+      t.string :blood_type
+      t.integer :birth_year
+      t.integer :birth_month
+      t.integer :birth_day
+      t.string :prefecture1
+      t.string :prefecture2
       t.string :address1
       t.string :address2
       t.integer :phonenumber1

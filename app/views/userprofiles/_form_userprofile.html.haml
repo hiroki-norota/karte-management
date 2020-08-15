@@ -1,0 +1,7 @@
+.addresses
+  = form_with model: @userprofile, local: true do |f|
+    
+    .btns
+      = link_to "/", class: "contents__btn" do
+        キャンセル
+      = f.button '登録', class: 'contents__btn'

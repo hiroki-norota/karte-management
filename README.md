@@ -41,12 +41,14 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|record_id|integer||
 |name1|string|null: false|
 |name2|string|null: false|
 |age|integer|string||
 |gender|integer||
-|birthday|integer||
+|blood_type|string|
+|birth_year|integer||
+|birth_month|integer||
+|birth_day|integer||
 |address1|string||
 |address2|string||
 |phonenumber1|integer||
