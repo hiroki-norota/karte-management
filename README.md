@@ -44,11 +44,9 @@
 |name1|string|null: false|
 |name2|string|null: false|
 |age|integer||
-|gender|integer|null: false|
+|gender|string||
 |blood_type|string|
-|birth_year|integer||
-|birth_month|integer||
-|birth_day|integer||
+|birthday|integer||
 |address1|string||
 |address2|string||
 |phonenumber1|integer||
@@ -59,12 +57,8 @@
 |business|string||
 |insured_number|integer||
 |insured_id|integer||
-|delivery_year|integer||
-|delivery_month|integer||
-|delivery_day|integer||
-|expiration_year|integer||
-|expiration_month|integer||
-|expiration_day|integer||
+|delivery_date|integer||
+|expiration_date|integer||
 |burden|integer||
 |insurer_number|integer||
 |remarks|text||
