@@ -43,8 +43,8 @@
 |------|----|-------|
 |name1|string|null: false|
 |name2|string|null: false|
-|age|integer|string||
-|gender|integer||
+|age|integer||
+|gender|integer|null: false|
 |blood_type|string|
 |birth_year|integer||
 |birth_month|integer||
@@ -57,6 +57,16 @@
 |phonenumber4|integer||
 |mail|string||
 |business|string||
+|insured_number|integer||
+|insured_id|integer||
+|delivery_year|integer||
+|delivery_month|integer||
+|delivery_day|integer||
+|expiration_year|integer||
+|expiration_month|integer||
+|expiration_day|integer||
+|burden|integer||
+|insurer_number|integer||
 |remarks|text||
 |user_id|integer|null: false, foreign_key: true|
 
