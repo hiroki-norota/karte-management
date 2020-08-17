@@ -6,7 +6,7 @@ class CreateUserprofiles < ActiveRecord::Migration[6.0]
       t.integer :age
       t.string :gender
       t.string :blood_type
-      t.integer :birthday
+      t.date :birthday
       t.string :prefecture1
       t.string :prefecture2
       t.string :address1
@@ -19,8 +19,8 @@ class CreateUserprofiles < ActiveRecord::Migration[6.0]
       t.string :business
       t.integer :insured_number
       t.integer :insured_id
-      t.integer :delivery_date
-      t.integer :expiration_date
+      t.date :delivery_date
+      t.date :expiration_date
       t.integer :burden
       t.integer :insurer_number
       t.text :remarks
