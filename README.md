@@ -55,12 +55,7 @@
 |phonenumber4|integer||
 |mail|string||
 |business|string||
-|insured_number|integer||
-|insured_id|integer||
-|delivery_date|integer||
-|expiration_date|integer||
-|burden|integer||
-|insurer_number|integer||
+|insured_id|integer|foreign_key: true|
 |remarks|text||
 |user_id|integer|null: false, foreign_key: true|
 
@@ -68,6 +63,16 @@
 - belongs_to :user
 - has_many :medicalrecords
 - has_one :firstvisit
+
+## insuredテーブル
+|Column|Type|Options|
+|------|----|-------|
+|insured_number|integer||
+|insured_key|integer||
+|delivery_date|integer||
+|expiration_date|integer||
+|burden|integer||
+|insurer_number|integer||
 
 ## medicalrecordsテーブル
 
