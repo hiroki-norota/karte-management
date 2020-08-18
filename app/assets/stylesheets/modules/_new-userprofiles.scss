@@ -1,0 +1,46 @@
+.userprofile_addresses {
+  height: calc(100vh - 62px);
+  width: calc(100% / 3);
+  margin: 0 auto;
+  &--infoinformetion {
+
+  }
+
+  &--street_address {
+
+  }
+  &--emergency_contact{
+
+  }
+
+  &__insured_card {
+
+  }
+  &__remakes_column {
+
+  }
+
+  &__btn {
+    display: inline-block;
+  
+    &--design {
+      @include btn_design;
+    }
+    .color-gray {
+  
+      background-color: $gray;
+      &:hover {
+        background-color: lighten($slategray, 10%);
+      }
+    }
+    .color-red {
+      background-color: $salmon;
+      border: none;
+      &:hover {
+        background-color: lighten($crimson, 10%);
+      }
+    }
+  }  
+}
+
+

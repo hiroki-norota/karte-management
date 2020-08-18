@@ -1,0 +1,12 @@
+@mixin btn-design {
+  //display: block;
+  height: 80px;
+  width: 360px;
+  margin: 0 auto 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: $white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 80px;
+}
