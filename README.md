@@ -63,8 +63,10 @@
 - belongs_to :user
 - has_many :medicalrecords
 - has_one :firstvisit
+- belongs_to :insured, optional: true
 
 ## insuredテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |insured_number|integer||
@@ -73,6 +75,9 @@
 |expiration_date|integer||
 |burden|integer||
 |insurer_number|integer||
+
+### Association
+- has_many :userprofiles
 
 ## medicalrecordsテーブル
 
