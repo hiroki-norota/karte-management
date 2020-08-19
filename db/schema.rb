@@ -29,12 +29,7 @@ ActiveRecord::Schema.define(version: 2020_05_16_023708) do
     t.integer "phonenumber4"
     t.string "mail"
     t.string "business"
-    t.integer "insured_number"
     t.integer "insured_id"
-    t.date "delivery_date"
-    t.date "expiration_date"
-    t.integer "burden"
-    t.integer "insurer_number"
     t.text "remarks"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

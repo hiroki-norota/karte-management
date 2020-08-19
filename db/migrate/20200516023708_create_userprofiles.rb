@@ -17,12 +17,7 @@ class CreateUserprofiles < ActiveRecord::Migration[6.0]
       t.integer :phonenumber4
       t.string :mail
       t.string :business
-      t.integer :insured_number
       t.integer :insured_id
-      t.date :delivery_date
-      t.date :expiration_date
-      t.integer :burden
-      t.integer :insurer_number
       t.text :remarks
       t.references :user, foreign_key: true
       t.timestamps
