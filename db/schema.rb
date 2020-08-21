@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_16_023708) do
+ActiveRecord::Schema.define(version: 2020_08_20_105332) do
+
+  create_table "insureds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "insured_number"
+    t.integer "insured_key"
+    t.integer "delivery_date"
+    t.integer "expiration_date"
+    t.string "burden"
+    t.integer "insurer_number"
+    t.bigint "userprofile_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["userprofile_id"], name: "index_insureds_on_userprofile_id"
+  end
 
   create_table "userprofiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name1", null: false
@@ -51,5 +64,6 @@ ActiveRecord::Schema.define(version: 2020_05_16_023708) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "insureds", "userprofiles"
   add_foreign_key "userprofiles", "users"
 end

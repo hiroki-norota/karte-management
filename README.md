@@ -75,6 +75,7 @@
 |expiration_date|integer||
 |burden|integer||
 |insurer_number|integer||
+|userprofile_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :userprofiles
