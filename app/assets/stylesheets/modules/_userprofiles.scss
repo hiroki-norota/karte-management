@@ -82,6 +82,11 @@ header.header {
           padding: 10px 20px;
           text-align: left;
           border-bottom: 1px solid $gray;
+          text-decoration: none;
+          color: $dark;
+          &:hover {
+            color: $accent;
+          }
         }
       }
     }

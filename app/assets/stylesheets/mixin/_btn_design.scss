@@ -1,5 +1,4 @@
 @mixin btn-design {
-  //display: block;
   height: 80px;
   width: 360px;
   margin: 0 auto 50px;
@@ -9,4 +8,10 @@
   text-decoration: none;
   text-align: center;
   line-height: 80px;
+  &:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+  }
 }

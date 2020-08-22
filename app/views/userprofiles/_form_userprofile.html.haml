@@ -1,61 +1,134 @@
 = form_with model: @userprofile, local: true do |f|
   .userprofile_addresses
-    .userprofile_addresses__informetion
-      プロフィール登録
-      %p 名前(必須)
-      = f.text_field :name1, {class: "userprofile_addresses__text"}
-      %p フリガナ(必須)
-      = f.text_field :name2, {class: "userprofile_addresses__text"}
-      %p 年齢
-      = f.number_field :age, {class: "userprofile_addresses__age"}
-      %p 性別
-      = f.select :gender, ["男性","女性"], {prompt: "---"}, class:"userprofile_addresses__select"
-      %p 血液型
-      = f.select :blood_type, ["A","B","AB","O","その他"], {prompt: "---"}, class:"userprofile_addresses__select"
-      %p 生年月日
-      = f.date_select :birthday, {use_month_numbers: true, start_year: 1920, end_year: (Time.now.year), default: Date.new(1989, 1, 1), date_separator: '/', class:"userprofile_addresses__date-select"}
-      %p メール
-      = f.email_field :mail, {class: "userprofile_addresses__text"}
-      %p 職業
-      = f.text_field :business, {class: "userprofile_addresses__text"}
-    .userprofile_addresses__street_address
-      住所
-      %p 都道府県
-      = f.select :prefecture1, ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"], {prompt: "---"}, class: "userprofile_addresses__prefecture-select"
-      %p 市区町村番地建物名
-      = f.text_field :address1, {class: "userprofile_addresses__address"}
-      %p 連絡先(電話番号)
-      = f.telephone_field :phonenumber1, {maxlength: 10, class: "userprofile_addresses__phone-number"}
-      %p 連絡先(携帯)
-      = f.telephone_field :phonenumber2, {maxlength: 11, class: "userprofile_addresses__phone-number"}
-      .userprofile_addresses__emergency_contact
+    %h3
+      ユーザー登録
+    .userprofile_addresses__info
+      %table.userprofile_addresses__space
+        %tr
+          %td 名前(必須)
+          %td
+            = f.text_field :name1, {class: "userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td フリガナ(必須)
+          %td
+            = f.text_field :name2, {class: "userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 年齢
+          %td
+            = f.number_field :age, {class: "userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 性別
+          %td
+            = f.select :gender, ["男性","女性"], {prompt: "---"}, class:"userprofile_addresses__text"
+      %table.userprofile_addresses__space
+        %tr
+          %td 血液型
+          %td
+            = f.select :blood_type, ["A","B","AB","O","その他"], {prompt: "---"}, class:"userprofile_addresses__text"
+      %table.userprofile_addresses__space
+        %tr
+          %td 生年月日
+          %td
+            = f.date_select :birthday, {use_month_numbers: true, start_year: 1920, end_year: (Time.now.year), default: Date.new(1989, 1, 1), date_separator: '/', class:"userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td メール
+          %td
+            = f.email_field :mail, {class: "userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 職業
+          %td
+            = f.text_field :business, {class: "userprofile_addresses__text"}
+    .userprofile_addresses__street
+      %h2
+        住所
+      %table.userprofile_addresses__space
+        %tr
+          %td 都道府県
+          %td
+            = f.select :prefecture1, ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"], {prompt: "---"}, class: "userprofile_addresses__text"
+      %table.userprofile_addresses__space
+        %tr
+          %td 市区町村番地建物名
+          %td 
+            = f.text_field :address1, {class: "userprofile_addresses__address"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 連絡先(電話番号)
+          %td
+            = f.telephone_field :phonenumber1, {maxlength: 10, class: "userprofile_addresses__phone-number"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 連絡先(携帯)
+          %td
+            = f.telephone_field :phonenumber2, {maxlength: 11, class: "userprofile_addresses__phone-number"}
+     
+    .userprofile_addresses__emergency
+      %h2
         緊急連絡先
-        %p 都道府県
-        = f.select :prefecture2, ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"], {prompt: "---"}, class: "userprofile_addresses__prefecture-select"
-        %p 市区町村番地建物名
-        = f.text_field :address2, {class: "userprofile_addresses__address"}
-        %p 連絡先(電話番号)
-        = f.telephone_field :phonenumber3, {maxlength: 10, class: "userprofile_addresses__phone-number"}
-        %p 連絡先(携帯)
-        = f.telephone_field :phonenumber4, {maxlength: 11, class: "userprofile_addresses__phone-number"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 都道府県
+          %td
+            = f.select :prefecture2, ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"], {prompt: "---"}, class: "userprofile_addresses__text"
+      %table.userprofile_addresses__space
+        %tr
+          %td 市区町村番地建物名
+          %td 
+            = f.text_field :address2, {class: "userprofile_addresses__address"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 連絡先(電話番号)
+          %td
+            = f.telephone_field :phonenumber3, {maxlength: 10, class: "userprofile_addresses__phone-number"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 連絡先(携帯)
+          %td
+            = f.telephone_field :phonenumber4, {maxlength: 11, class: "userprofile_addresses__phone-number"}
       
     .userprofile_addresses__insured_card
-      被保険者証
-      %p 番号
-      = f.number_field :insured_number, {class: "userprofile_addresses__insured_number"}
-      %p 記号
-      = f.text_field :insured_key, {class: "userprofile_addresses__insured_key"}
-      %p 交付年月日
-      = f.date_select :delivery_date, {use_month_numbers: true, start_year: 1990, end_year: (Time.now.year), default: Date.new(2000, 1, 1), date_separator: '/', class:"userprofile_addresses__date-select"}
-      %p 有効期限
-      = f.date_select :expiration_date, {use_month_numbers: true, start_year: (Time.now.year), end_year: (Time.now.year)+10, date_separator: '/', class:"userprofile_addresses__date-select"}
-      %p 負担割合
-      = f.select :burden, ["1割負担","2割負担","3割負担","全額負担","三療券","その他"], {prompt: "---"}, class: "userprofile_addresses__burden"
-      %p 保険者番号
-      = f.number_field :insurer_number, {class: "userprofile_addresses__insurer_number"}
-    .userprofile_addresses__remakes_column
-      備考欄
-      = f.text_area :remarks, {class: "userprofile_addresses__remake"}
+      %h2
+        被保険者証
+      %table.userprofile_addresses__space
+        %tr
+          %td 番号
+          %td
+            = f.number_field :insured_number, {class: "userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 記号
+          %td
+            = f.text_field :insured_key, {class: "userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 交付年月日
+          %td
+            = f.date_select :delivery_date, {use_month_numbers: true, start_year: 1990, end_year: (Time.now.year), default: Date.new(2000, 1, 1), date_separator: '/', class:"userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 有効期限
+          %td
+            = f.date_select :expiration_date, {use_month_numbers: true, start_year: (Time.now.year), end_year: (Time.now.year)+10, date_separator: '/', class:"userprofile_addresses__text"}
+      %table.userprofile_addresses__space
+        %tr
+          %td 負担割合
+          %td
+            = f.select :burden, ["1割負担","2割負担","3割負担","全額負担","三療券","その他"], {prompt: "---"}, class: "userprofile_addresses__text"
+      %table.userprofile_addresses__space
+        %tr
+          %td 保険者番号
+          %td
+            = f.number_field :insurer_number, {class: "userprofile_addresses__text"}
+      
+    .userprofile_addresses__remakes
+      .userprofile_addresses__remakes--title
+        備考欄
+      = f.text_area :remarks, {class: "userprofile_addresses__remakes--column"}
     .userprofile_addresses__btn
       = link_to "/", class: "userprofile_addresses__btn--design color-gray" do
         キャンセル
