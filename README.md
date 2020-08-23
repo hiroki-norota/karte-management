@@ -63,7 +63,7 @@
 - belongs_to :user
 - has_many :medicalrecords
 - has_one :firstvisit
-- belongs_to :insured, optional: true
+- has_one :insured, optional: true
 
 ## insuredテーブル
 
@@ -78,7 +78,7 @@
 |userprofile_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :userprofiles
+- has_one :userprofiles
 
 ## medicalrecordsテーブル
 
