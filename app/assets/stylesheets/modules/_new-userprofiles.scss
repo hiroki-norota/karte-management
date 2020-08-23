@@ -1,0 +1,79 @@
+.userprofile_addresses {
+  height: calc(100% - 62px);
+  width: calc(360px * 2);
+  margin: 0 auto;
+  background-color: mistyrose;
+  text-align: center;
+
+  h3 {
+    text-align: center;
+    font-size: 24px;
+  }
+  &__space {
+    margin-left: 150px;
+  }
+  &__phone-number {
+    width: 50px;
+  }
+  &__street {
+    padding-top: 10px;
+  }
+  &__emergency{
+    padding-top: 10px;
+  }
+
+  &__insured_card {
+    padding-top: 10px;
+  }
+  &__remakes {
+    height: 100px;
+    line-height: 90px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    &--title{
+      line-height: 90px;
+      padding-right: 10px;
+    }
+    &--column {
+      height: 90px;
+      width: 400px;
+    }
+  }
+  &__text {
+    margin: 5px;
+  }
+  &__address {
+    width: 300px;
+    margin: 5px;
+  }
+  &__phone-number {
+    width: 100px;
+    margin: 5px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    &--design {
+      @include btn_design;
+    }
+    .color-gray {
+      background-color: $gray;
+      &:hover {
+        background-color: lighten($slategray, 10%);
+      }
+    }
+    .color-red {
+      background-color: $salmon;
+      border: none;
+      cursor: pointer;
+      cursor: hand;
+      &:hover {
+        background-color: lighten($crimson, 10%);
+      }
+    }
+  }  
+}
+
+

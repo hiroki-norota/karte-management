@@ -41,11 +41,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|record_id|integer||
 |name1|string|null: false|
 |name2|string|null: false|
-|age|integer|string||
-|gender|integer||
+|age|integer||
+|gender|string||
+|blood_type|string|
 |birthday|integer||
 |address1|string||
 |address2|string||
@@ -55,6 +55,7 @@
 |phonenumber4|integer||
 |mail|string||
 |business|string||
+|insured_id|integer|foreign_key: true|
 |remarks|text||
 |user_id|integer|null: false, foreign_key: true|
 
@@ -62,6 +63,22 @@
 - belongs_to :user
 - has_many :medicalrecords
 - has_one :firstvisit
+- belongs_to :insured, optional: true
+
+## insuredテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|insured_number|integer||
+|insured_key|integer||
+|delivery_date|integer||
+|expiration_date|integer||
+|burden|integer||
+|insurer_number|integer||
+|userprofile_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :userprofiles
 
 ## medicalrecordsテーブル
 

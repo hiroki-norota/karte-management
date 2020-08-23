@@ -3,21 +3,13 @@ body,html {
   background-color: $lightGray;
 }
 
-h1,h2,h3,h4,h5,h6,body {
+h1,h2,h3,h4,h5,h6,body,p {
   line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
   color: $dark;
   font-family: $default-font;
   margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: $dark;
-  &:hover {
-    color: $accent;
-  }
 }
 
 header.header {
@@ -37,6 +29,11 @@ header.header {
       float: left;
       a {
         display: block;
+        text-decoration: none;
+        color: $dark;
+        &:hover {
+          color: $accent;
+        }
       }
     }
     div.grid-6 {
@@ -85,6 +82,11 @@ header.header {
           padding: 10px 20px;
           text-align: left;
           border-bottom: 1px solid $gray;
+          text-decoration: none;
+          color: $dark;
+          &:hover {
+            color: $accent;
+          }
         }
       }
     }
@@ -97,19 +99,12 @@ header.header {
   width: 1200px;
   margin: 0 auto;
   &__btn {
+    @include btn_design;
     display: block;
-    height: 80px;
-    width: 360px;
-    margin: 0 auto 50px;
-    border-radius: 10px;
-    font-size: 20px;
-    color: $white;
-    text-decoration: none;
-    text-align: center;
-    line-height: 80px;
     background-color: $accent;
     &:hover {
       background-color: lighten($accent, 10%);
+      color: $accent;
     }
   }
   .form {
