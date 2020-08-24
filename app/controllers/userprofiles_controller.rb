@@ -11,7 +11,9 @@ class UserprofilesController < ApplicationController
   def create
     @userprofile = Userprofile.new(userprofile_params)
     @userprofile.save
-    redirect_to "userprofile/#{@userprofile.id}"
+
+    redirect_to root_path
+    #redirect_to "userprofile/#{@userprofile.id}"
   end
 
   def edit
@@ -31,6 +33,7 @@ class UserprofilesController < ApplicationController
   end
 
   private
+  
   def userprofile_params
     params.require(:userprofile).permit(
       :name1,
@@ -49,8 +52,12 @@ class UserprofilesController < ApplicationController
       :phonenumber4,
       :mail,
       :business,
-      :insured_id,
-      :remarks
+      :insured_number,
+      :insured_key,
+      :delivery_date,
+      :expiration_date,
+      :burden,
+      :remarks        
     )
   end
 
