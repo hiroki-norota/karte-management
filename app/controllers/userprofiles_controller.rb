@@ -57,6 +57,7 @@ class UserprofilesController < ApplicationController
       :delivery_date,
       :expiration_date,
       :burden,
+      :insurer_number,
       :remarks        
     )
   end
