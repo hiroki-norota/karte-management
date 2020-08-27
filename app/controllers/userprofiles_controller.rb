@@ -12,8 +12,7 @@ class UserprofilesController < ApplicationController
     @userprofile = Userprofile.new(userprofile_params)
     @userprofile.save
 
-    redirect_to root_path
-    #redirect_to "userprofile/#{@userprofile.id}"
+    redirect_to userprofile_url(id: @userprofile.id)
   end
 
   def edit
