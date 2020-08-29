@@ -1,4 +1,108 @@
 .userprofile-wrapper
   %h3
-    = @userprofile.name1
-    
+    = @userprofile.name1 + '様'
+  %table.userprofile-show__addresses
+    %th
+      %th 名前
+      %td
+        = @userprofile.name1
+    %th
+      %th フリガナ
+      %td
+        = @userprofile.name2
+    %th
+      %th 年齢
+      %td
+        = @userprofile.age
+    %th
+      %th 性別
+      %td 
+        = @userprofile.gender
+    %th
+      %th 血液型
+      %td
+        = @userprofile.blood_type
+    %th
+      %th 生年月日
+      %td
+        = @userprofile.birthday
+    %th
+      %th メール
+      %td
+        = @userprofile.mail
+    %th
+      %th 職業
+      %td
+        = @userprofile.business
+
+  %table.userprofile-show__street
+    住所
+    %th
+      %th 都道府県
+      %td
+        = @userprofile.prefecture1
+    %th
+      %th 市区町村番地建物名
+      %td
+        = @userprofile.prefecture2
+    %th
+      %th 電話番号
+      %td
+        = @userprofile.address1
+    %th
+      %th 携帯電話
+      %td
+        = @userprofile.phonenumber1
+  %table.userprofile-show__emergency-contact
+    緊急連絡先
+    %th
+      %th 都道府県
+      %td
+        = @userprofile.phonenumber2
+    %th
+      %th 市区町村番地建物名
+      %td
+        = @userprofile.address2
+    %th
+      %th 電話番号
+      %td
+        = @userprofile.phonenumber3
+    %th
+      %th 携帯電話
+      %td
+        = @userprofile.phonenumber4
+  %table.userprofile-show__insured-card
+    被保険者証
+    %th
+      %th 番号
+      %td
+        = @userprofile.insured_number
+
+    %th
+      %th 記号
+      %td
+        = @userprofile.insured_key
+
+    %th
+      %th 交付年月日
+      %td
+        = @userprofile.delivery_date
+
+    %th
+      %th 有効期限
+      %td
+        = @userprofile.expiration_date
+
+    %th
+      %th 負担割合
+      %td
+        = @userprofile.burden
+    %th
+      %th 保険者番号
+      %td
+        = @userprofile.insurer_number
+  .userprofile-show__remakes
+    備考欄
+    .userprofile-show__remakes--column
+      = @userprofile.remarks
+          
