@@ -55,8 +55,10 @@
         = @userprofile.address1
       .userprofile-show__street--road--phone
         .userprofile-show__street--road--phone--home
+          %p 電話番号
           = @userprofile.phonenumber1
         .userprofile-show__street--road--phone--mobile
+          %p 携帯電話
           = @userprofile.phonenumber2
 
     .userprofile-show__street--emergency-contact
@@ -66,30 +68,32 @@
         = @userprofile.address2
       .userprofile-show__street--emergency-contact--phone
         .userprofile-show__street--emergency-contact--phone--home
+          %p 電話番号
           = @userprofile.phonenumber3
         .userprofile-show__street--emergency-contact--phone--mobile
+          %p 携帯電話
           = @userprofile.phonenumber4
   
   .userprofile-show__insured-card
     被保険者証
     .userprofile-show__insured-card--row1
-      .userprofile-show__insured-card--row1
+      .userprofile-show__insured-card--row1--insured_number
         %p 番号
         = @userprofile.insured_number
-      .userprofile-show__insured-card--row1
+      .userprofile-show__insured-card--row1--insured_key
         %p 記号
         = @userprofile.insured_key
-      .userprofile-show__insured-card--row1
+      .userprofile-show__insured-card--row1--delivery_date
         %p 交付年月日
         = @userprofile.delivery_date
     .userprofile-show__insured-card--row2
-      .userprofile-show__insured-card--row2
+      .userprofile-show__insured-card--row2--expiration_date
         %p 交付年月日
         = @userprofile.expiration_date
-      .userprofile-show__insured-card--row2
+      .userprofile-show__insured-card--row2--burden
         %p 負担割合
         = @userprofile.burden
-      .userprofile-show__insured-card--row2
+      .userprofile-show__insured-card--row2--insurer_number
         %p 保険者番号
         = @userprofile.insurer_number
 
