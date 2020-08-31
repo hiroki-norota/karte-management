@@ -8,40 +8,44 @@
       削除
 
   .userprofile-show__addresses
-
-  %table.userprofile-show__addresses
-    %th
-      %th 名前
-      %td
-        = @userprofile.name1
-    %th
-      %th フリガナ
-      %td
-        = @userprofile.name2
-    %th
-      %th 年齢
-      %td
-        = @userprofile.age
-    %th
-      %th 性別
-      %td 
-        = @userprofile.gender
-    %th
-      %th 血液型
-      %td
-        = @userprofile.blood_type
-    %th
-      %th 生年月日
-      %td
-        = @userprofile.birthday
-    %th
-      %th メール
-      %td
+    .userprofile-show__addresses--row1
+      .userprofile-show__addresses--row1--name
+        .userprofile-show__addresses--row1--name--name2
+          %p フリガナ
+          = @userprofile.name2
+        .userprofile-show__addresses--row1--name--name1
+          %p 氏名
+          = @userprofile.name1
+      .userprofile-show__addresses--row1--age
+        .userprofile-show__addresses--row1--age--title
+          年齢
+        .userprofile-show__addresses--row1--age--val
+          = @userprofile.age
+      .userprofile-show__addresses--row1--gender
+        .userprofile-show__addresses--row1--gender--title
+          性別
+        .userprofile-show__addresses--row1--gender--val
+          = @userprofile.gender
+      .userprofile-show__addresses--row1--blood_type
+        .userprofile-show__addresses--row1--blood_type--title
+          血液型
+        .userprofile-show__addresses--row1--blood_type--val
+          = @userprofile.blood_type
+    
+    .userprofile-show__addresses--row2
+      .userprofile-show__addresses--row2--birthday
+        .userprofile-show__addresses--row2--birthday--title
+          生年月日
+        .userprofile-show__addresses--row2--birthday--val
+          = @userprofile.birthday
+      .userprofile-show__addresses--row2--mail
+        %p メール
         = @userprofile.mail
-    %th
-      %th 職業
-      %td
-        = @userprofile.business
+      .userprofile-show__addresses--row2--business
+        .userprofile-show__addresses--row2--business--title
+          職業
+        .userprofile-show__addresses--row2--business--val
+          = @userprofile.business
 
   .userprofile-show__street
     住所
