@@ -69,37 +69,30 @@
           = @userprofile.phonenumber3
         .userprofile-show__street--emergency-contact--phone--mobile
           = @userprofile.phonenumber4
-        
-  %table.userprofile-show__insured-card
+  
+  .userprofile-show__insured-card
     被保険者証
-    %th
-      %th 番号
-      %td
+    .userprofile-show__insured-card--row1
+      .userprofile-show__insured-card--row1
+        %p 番号
         = @userprofile.insured_number
-
-    %th
-      %th 記号
-      %td
+      .userprofile-show__insured-card--row1
+        %p 記号
         = @userprofile.insured_key
-
-    %th
-      %th 交付年月日
-      %td
+      .userprofile-show__insured-card--row1
+        %p 交付年月日
         = @userprofile.delivery_date
-
-    %th
-      %th 有効期限
-      %td
+    .userprofile-show__insured-card--row2
+      .userprofile-show__insured-card--row2
+        %p 交付年月日
         = @userprofile.expiration_date
-
-    %th
-      %th 負担割合
-      %td
+      .userprofile-show__insured-card--row2
+        %p 負担割合
         = @userprofile.burden
-    %th
-      %th 保険者番号
-      %td
+      .userprofile-show__insured-card--row2
+        %p 保険者番号
         = @userprofile.insurer_number
+
   .userprofile-show__remakes
     備考欄
     .userprofile-show__remakes--column
