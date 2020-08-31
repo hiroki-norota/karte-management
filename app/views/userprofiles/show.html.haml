@@ -1,6 +1,14 @@
-.userprofile-wrapper
-  %h3
+.userprofile-show
+  %h3.userprofile-show__title
     = @userprofile.name1 + '様'
+  .userprofile-show__btn
+    = link_to "/", class: "userprofile-show__edit" do
+      編集
+    = link_to "/", class: "userprofile-show__delete" do
+      削除
+
+  .userprofile-show__addresses
+
   %table.userprofile-show__addresses
     %th
       %th 名前
@@ -35,42 +43,29 @@
       %td
         = @userprofile.business
 
-  %table.userprofile-show__street
+  .userprofile-show__street
     住所
-    %th
-      %th 都道府県
-      %td
+    .userprofile-show__street--road
+      .userprofile-show__street--road--addresses
         = @userprofile.prefecture1
-    %th
-      %th 市区町村番地建物名
-      %td
-        = @userprofile.prefecture2
-    %th
-      %th 電話番号
-      %td
         = @userprofile.address1
-    %th
-      %th 携帯電話
-      %td
-        = @userprofile.phonenumber1
-  %table.userprofile-show__emergency-contact
-    緊急連絡先
-    %th
-      %th 都道府県
-      %td
-        = @userprofile.phonenumber2
-    %th
-      %th 市区町村番地建物名
-      %td
+      .userprofile-show__street--road--phone
+        .userprofile-show__street--road--phone--home
+          = @userprofile.phonenumber1
+        .userprofile-show__street--road--phone--mobile
+          = @userprofile.phonenumber2
+
+    .userprofile-show__street--emergency-contact
+      緊急連絡先
+      .userprofile-show__street--emergency-contact--addresses
+        = @userprofile.prefecture2
         = @userprofile.address2
-    %th
-      %th 電話番号
-      %td
-        = @userprofile.phonenumber3
-    %th
-      %th 携帯電話
-      %td
-        = @userprofile.phonenumber4
+      .userprofile-show__street--emergency-contact--phone
+        .userprofile-show__street--emergency-contact--phone--home
+          = @userprofile.phonenumber3
+        .userprofile-show__street--emergency-contact--phone--mobile
+          = @userprofile.phonenumber4
+        
   %table.userprofile-show__insured-card
     被保険者証
     %th
