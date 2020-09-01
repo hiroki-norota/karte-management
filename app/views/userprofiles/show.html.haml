@@ -1,11 +1,12 @@
 .userprofile-show
-  %h3.userprofile-show__title
-    = @userprofile.name1 + '様'
-  .userprofile-show__btn
-    = link_to "/", class: "userprofile-show__edit" do
-      編集
-    = link_to "/", class: "userprofile-show__delete" do
-      削除
+  .userprofile-show__top
+    %h3.userprofile-show__top--title
+      = @userprofile.name1 + '様'
+    .userprofile-show__top--btn
+      = link_to "/", class: "userprofile-show__top--btn--edit" do
+        プロフィール編集
+      = link_to "/", class: "userprofile-show__top--btn--delete" do
+        削除
 
   .userprofile-show__addresses
     .userprofile-show__addresses--row1
