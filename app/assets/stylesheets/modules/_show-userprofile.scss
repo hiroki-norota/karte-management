@@ -1,7 +1,7 @@
 .userprofile-show {
   width: 80%;
   margin: 0 auto;
-  background-color: oldlace;
+  background-color: $white;
   &__top {
     display: flex;
     justify-content: center;
@@ -19,16 +19,17 @@
       padding-right: 30px;
       &--edit {
         text-decoration: none;
-        padding-right: 30px;
-        color: blue;//仮置き
+        margin-right: 30px;
+        color: $white;
+        background-color: $slategray;
+        border-radius: 5px;
+        align-items: center;
       }
       &--delete {
         text-decoration: none;
-        color: $white;//仮置き
+        color: $white;
         background-color: $crimson;
-        height: 30px;
-        width: 50px;
-        border-radius: 10px;
+        border-radius: 5px;
       }
     }
   }
