@@ -7,6 +7,9 @@
     justify-content: center;
     position: relative;
     padding-top: 20px;
+    h3 {
+      font-size: 20px;
+    }
     &--title h3 {
       margin: 0;
       line-height: 50px;
@@ -35,56 +38,94 @@
   }
 
   &__addresses {
+    height: 300px;
+    width: 90%;
+    margin: auto;
     &--row1 {
+      margin-top: 10px;
+      display: flex;
       &--name {
+        width: 50%;
+        border: solid 1px $dark;
         &--name2 {
-
+          display: flex;
+          justify-content: space-around;
+          border-bottom: solid 1px $dark;
+          p {
+            margin-right: 5px;
+          }
         }
         &--name1 {
-
+          display: flex;
+          justify-content: space-around;
+          p {
+            margin-right: 5px;
+          }
         }
       }
       &--age {
+        width: 20%;
+        border: solid 1px $dark;
         &--title {
-
+          text-align: center;
+          border-bottom: solid 1px $dark;
         }
         &--val {
-
+          text-align: center;
         }
       }
       &--gender {
+        width: 20%;
+        border: solid 1px $dark;
         &--title {
-
+          text-align: center;
+          border-bottom: solid 1px $dark;
         }
         &--val {
-
+          text-align: center;
         }
       }
       &--blood_type {
+        width: 20%;
+        border: solid 1px $dark;
         &--title {
-
+          text-align: center;
+          border-bottom: solid 1px $dark;
         }
         &--val {
-
+          text-align: center;
         }
       }
     }
 
     &--row2 {
+      display: flex;
+      width: 100%;
       &--birthday {
+        width: calc(100% / 3);
+        text-align: center;
+        border: solid 1px $dark;
         &--title {
-
+          border-bottom: solid 1px $dark;
         }
         &--val {
 
         }
       }
       &--mail {
-
+        width: calc(100% / 3);
+        text-align: center;
+        border: solid 1px $dark;
+        p {
+          border-bottom: solid 1px $dark;
+        }
       }
       &--business {
+        width: calc(100% / 3);
+        text-align: center;
+        border: solid 1px $dark;
         &--title {
-
+          border-bottom: solid 1px $dark;
         }
         &--val {
 
