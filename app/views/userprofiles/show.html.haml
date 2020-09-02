@@ -49,9 +49,9 @@
           = @userprofile.business
 
   .userprofile-show__street
-    住所
     .userprofile-show__street--road
       .userprofile-show__street--road--addresses
+        %p 住所
         = @userprofile.prefecture1
         = @userprofile.address1
       .userprofile-show__street--road--phone
@@ -63,8 +63,8 @@
           = @userprofile.phonenumber2
 
     .userprofile-show__street--emergency-contact
-      緊急連絡先
       .userprofile-show__street--emergency-contact--addresses
+        %p 緊急連絡先
         = @userprofile.prefecture2
         = @userprofile.address2
       .userprofile-show__street--emergency-contact--phone
