@@ -38,7 +38,6 @@
   }
 
   &__addresses {
-    //height: 300px;
     width: 90%;
     margin: auto;
     &--row1 {
@@ -53,6 +52,7 @@
           border-bottom: solid 1px $dark;
           p {
             margin-right: 5px;
+            font-weight: bold;
           }
         }
         &--name1 {
@@ -60,6 +60,7 @@
           justify-content: space-around;
           p {
             margin-right: 5px;
+            font-weight: bold;
           }
         }
       }
@@ -69,6 +70,7 @@
         &--title {
           text-align: center;
           border-bottom: solid 1px $dark;
+          font-weight: bold;
         }
         &--val {
           text-align: center;
@@ -80,6 +82,7 @@
         &--title {
           text-align: center;
           border-bottom: solid 1px $dark;
+          font-weight: bold;
         }
         &--val {
           text-align: center;
@@ -91,6 +94,7 @@
         &--title {
           text-align: center;
           border-bottom: solid 1px $dark;
+          font-weight: bold;
         }
         &--val {
           text-align: center;
@@ -107,9 +111,7 @@
         border: solid 1px $dark;
         &--title {
           border-bottom: solid 1px $dark;
-        }
-        &--val {
-
+          font-weight: bold;
         }
       }
       &--mail {
@@ -118,6 +120,7 @@
         border: solid 1px $dark;
         p {
           border-bottom: solid 1px $dark;
+          font-weight: bold;
         }
       }
       &--business {
@@ -126,9 +129,7 @@
         border: solid 1px $dark;
         &--title {
           border-bottom: solid 1px $dark;
-        }
-        &--val {
-
+          font-weight: bold;
         }
       }
     }
@@ -138,6 +139,7 @@
     margin: auto;
     &--title {
       display: flex;
+      font-weight: bold;
     }
     &--road {
       display: flex;
@@ -145,21 +147,30 @@
       &--addresses {
         width: 70%;
         margin: 0 10px;
+        p {
+          font-weight: bold;
+        }
       }
       &--phone {
         width: 30%;
-        //margin: 0 10px;
         &--home {
           display: flex;
           justify-content: space-between;
-          margin-right: 10px;//
+          padding: 0 10px;
           border-bottom: solid 1px $dark;
           border-left:  solid 1px $dark;
+          p {
+            font-weight: bold;
+          }
         }
         &--mobile {
           display: flex;
           justify-content: space-between;
+          padding: 0 10px;
           border-left:  solid 1px $dark;
+          p {
+            font-weight: bold;
+          }
         }
       }
     }
@@ -169,20 +180,30 @@
       &--addresses {
         width: 70%;
         margin: 0 10px;
+        p {
+          font-weight: bold;
+        }
       }
       &--phone {
         width: 30%;
-        margin: 0 10px;
         &--home {
           display: flex;
           justify-content: space-between;
+          padding: 0 10px;
           border-bottom: solid 1px $dark;
           border-left:  solid 1px $dark;
+          p {
+            font-weight: bold;
+          }
         }
         &--mobile {
           display: flex;
           justify-content: space-between;
-          border-left:  solid 1px $dark;  
+          padding: 0 10px;
+          border-left:  solid 1px $dark;
+          p {
+            font-weight: bold;
+          }  
         }
       }
     }
