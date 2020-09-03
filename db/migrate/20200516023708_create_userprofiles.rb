@@ -11,18 +11,18 @@ class CreateUserprofiles < ActiveRecord::Migration[6.0]
       t.string :prefecture2
       t.string :address1
       t.string :address2
-      t.bigint :phonenumber1
-      t.bigint :phonenumber2
-      t.bigint :phonenumber3
-      t.bigint :phonenumber4
+      t.string :phonenumber1
+      t.string :phonenumber2
+      t.string :phonenumber3
+      t.string :phonenumber4
       t.string :mail
       t.string :business
-      t.integer :insured_number
-      t.integer :insured_key
+      t.string :insured_number
+      t.string :insured_key
       t.integer :delivery_date
       t.integer :expiration_date
       t.string :burden
-      t.bigint :insurer_number
+      t.string :insurer_number
       t.text :remarks
       t.references :user, foreign_key: true
       t.timestamps
