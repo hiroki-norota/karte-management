@@ -244,7 +244,12 @@
     height: 50px;
     margin: auto;
     border:  solid 1px $dark;
+    &--title {
+      padding-left: 10px;
+      font-weight: bold;
+    }
     &--column {
+      padding-left: 10px;
       overflow-y: scroll;
       overflow-x: hidden;
     }

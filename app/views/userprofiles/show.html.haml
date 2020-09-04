@@ -57,10 +57,10 @@
       .userprofile-show__street--road--phone
         .userprofile-show__street--road--phone--home
           %p 電話番号
-          = @userprofile.phonenumber1
+          = TelFormatter.format("#{@userprofile.phonenumber1}")
         .userprofile-show__street--road--phone--mobile
           %p 携帯電話
-          = @userprofile.phonenumber2
+          = TelFormatter.format("#{@userprofile.phonenumber2}")
 
     .userprofile-show__street--emergency-contact
       .userprofile-show__street--emergency-contact--addresses
@@ -70,10 +70,10 @@
       .userprofile-show__street--emergency-contact--phone
         .userprofile-show__street--emergency-contact--phone--home
           %p 電話番号
-          = @userprofile.phonenumber3
+          = TelFormatter.format("#{@userprofile.phonenumber3}")
         .userprofile-show__street--emergency-contact--phone--mobile
           %p 携帯電話
-          = @userprofile.phonenumber4
+          = TelFormatter.format("#{@userprofile.phonenumber4}")
   
   .userprofile-show__insured-card
     被保険者証
@@ -99,7 +99,8 @@
         = @userprofile.insurer_number
 
   .userprofile-show__remakes
-    備考欄
+    .userprofile-show__remakes--title
+      備考欄
     .userprofile-show__remakes--column
       = @userprofile.remarks
           
