@@ -1,4 +1,107 @@
-.userprofile-wrapper
-  %h3
-    = @userprofile.name1
-    
+.userprofile-show
+  .userprofile-show__top
+    %h3.userprofile-show__top--title
+      = @userprofile.name1 + '様'
+    .userprofile-show__top--btn
+      = link_to "/", class: "userprofile-show__top--btn--edit" do
+        プロフィール編集
+      = link_to "/", class: "userprofile-show__top--btn--delete" do
+        削除
+
+  .userprofile-show__addresses
+    .userprofile-show__addresses--row1
+      .userprofile-show__addresses--row1--name
+        .userprofile-show__addresses--row1--name--name2
+          %p フリガナ
+          = @userprofile.name2
+        .userprofile-show__addresses--row1--name--name1
+          %p 氏名
+          = @userprofile.name1
+      .userprofile-show__addresses--row1--age
+        .userprofile-show__addresses--row1--age--title
+          年齢
+        .userprofile-show__addresses--row1--age--val
+          = @userprofile.age
+      .userprofile-show__addresses--row1--gender
+        .userprofile-show__addresses--row1--gender--title
+          性別
+        .userprofile-show__addresses--row1--gender--val
+          = @userprofile.gender
+      .userprofile-show__addresses--row1--blood_type
+        .userprofile-show__addresses--row1--blood_type--title
+          血液型
+        .userprofile-show__addresses--row1--blood_type--val
+          = @userprofile.blood_type
+      
+    .userprofile-show__addresses--row2
+      .userprofile-show__addresses--row2--birthday
+        .userprofile-show__addresses--row2--birthday--title
+          生年月日
+        .userprofile-show__addresses--row2--birthday--val
+          = @userprofile.birthday
+      .userprofile-show__addresses--row2--mail
+        %p メール
+        = @userprofile.mail
+      .userprofile-show__addresses--row2--business
+        .userprofile-show__addresses--row2--business--title
+          職業
+        .userprofile-show__addresses--row2--business--val
+          = @userprofile.business
+
+  .userprofile-show__street
+    .userprofile-show__street--road
+      .userprofile-show__street--road--addresses
+        %p 住所
+        = @userprofile.prefecture1
+        = @userprofile.address1
+      .userprofile-show__street--road--phone
+        .userprofile-show__street--road--phone--home
+          %p 電話番号
+          = TelFormatter.format("#{@userprofile.phonenumber1}")
+        .userprofile-show__street--road--phone--mobile
+          %p 携帯電話
+          = TelFormatter.format("#{@userprofile.phonenumber2}")
+
+    .userprofile-show__street--emergency-contact
+      .userprofile-show__street--emergency-contact--addresses
+        %p 緊急連絡先
+        = @userprofile.prefecture2
+        = @userprofile.address2
+      .userprofile-show__street--emergency-contact--phone
+        .userprofile-show__street--emergency-contact--phone--home
+          %p 電話番号
+          = TelFormatter.format("#{@userprofile.phonenumber3}")
+        .userprofile-show__street--emergency-contact--phone--mobile
+          %p 携帯電話
+          = TelFormatter.format("#{@userprofile.phonenumber4}")
+  
+  .userprofile-show__insured-card
+    .userprofile-show__insured-card--title
+      被保険者証
+    .userprofile-show__insured-card--row1
+      .userprofile-show__insured-card--row1--insured_number
+        %p 番号
+        = @userprofile.insured_number
+      .userprofile-show__insured-card--row1--insured_key
+        %p 記号
+        = @userprofile.insured_key
+      .userprofile-show__insured-card--row1--delivery_date
+        %p 交付年月日
+        = @userprofile.delivery_date
+    .userprofile-show__insured-card--row2
+      .userprofile-show__insured-card--row2--expiration_date
+        %p 有効期限
+        = @userprofile.expiration_date
+      .userprofile-show__insured-card--row2--burden
+        %p 負担割合
+        = @userprofile.burden
+      .userprofile-show__insured-card--row2--insurer_number
+        %p 保険者番号
+        = @userprofile.insurer_number
+
+  .userprofile-show__remakes
+    .userprofile-show__remakes--title
+      備考欄
+    .userprofile-show__remakes--column
+      = @userprofile.remarks
+          
