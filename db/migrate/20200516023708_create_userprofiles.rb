@@ -19,8 +19,8 @@ class CreateUserprofiles < ActiveRecord::Migration[6.0]
       t.string :business
       t.string :insured_number
       t.string :insured_key
-      t.integer :delivery_date
-      t.integer :expiration_date
+      t.date :delivery_date
+      t.date :expiration_date
       t.string :burden
       t.string :insurer_number
       t.text :remarks

@@ -49,7 +49,6 @@
       display: flex;
       &--name {
         width: 50%;
-        //border: solid 1px $dark;
         &--name2 {
           display: flex;
           justify-content: space-around;
@@ -203,6 +202,10 @@
     p {
       font-weight: bold;
       border-bottom:  solid 1px $dark;
+    }
+    &--title {
+      padding-left: 10px;
+      font-weight: bold;
     }
     &--row1 {
       display: flex;
