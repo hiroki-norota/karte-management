@@ -10,22 +10,6 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Karte Manegement</a></h1>
-        <div class="user_nav grid-6">
-          <span>testuser
-            <ul class="user__info">
-              <li>
-                <%= link_to "マイページ", "#" %>
-                <%= link_to "ログアウト", destroy_user_session_path %>
-              </li>
-            </ul>
-          </span>
-        </div>
-      </div>
-    </header>    
-
     <%= yield %>
   </body>
 </html>
