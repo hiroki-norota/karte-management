@@ -8,5 +8,5 @@
         = current_user.name
         %ul.user__info
           %li
-            = link_to 'マイページ', '#'
+            = link_to 'マイページ', edit_user_path(current_user)
             = link_to 'ログアウト', destroy_user_session_path
