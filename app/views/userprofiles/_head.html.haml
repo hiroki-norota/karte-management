@@ -9,4 +9,4 @@
         %ul.user__info
           %li
             = link_to 'マイページ', edit_user_registration_path
-            = link_to 'ログアウト', destroy_user_session_path
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete
