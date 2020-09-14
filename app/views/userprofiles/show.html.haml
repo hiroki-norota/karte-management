@@ -58,10 +58,12 @@
       .userprofile-show__street--road--phone
         .userprofile-show__street--road--phone--home
           %p 電話番号
-          = TelFormatter.format("#{@userprofile.phonenumber1}")
+          -if@userprofile.phonenumber1.present?
+            = TelFormatter.format("#{@userprofile.phonenumber1}")
         .userprofile-show__street--road--phone--mobile
           %p 携帯電話
-          = TelFormatter.format("#{@userprofile.phonenumber2}")
+          -if@userprofile.phonenumber2.present?
+            = TelFormatter.format("#{@userprofile.phonenumber2}")
 
     .userprofile-show__street--emergency-contact
       .userprofile-show__street--emergency-contact--addresses
@@ -71,10 +73,12 @@
       .userprofile-show__street--emergency-contact--phone
         .userprofile-show__street--emergency-contact--phone--home
           %p 電話番号
-          = TelFormatter.format("#{@userprofile.phonenumber3}")
+          -if@userprofile.phonenumber3.present?
+            = TelFormatter.format("#{@userprofile.phonenumber3}")
         .userprofile-show__street--emergency-contact--phone--mobile
           %p 携帯電話
-          = TelFormatter.format("#{@userprofile.phonenumber4}")
+          -if@userprofile.phonenumber4.present?
+            = TelFormatter.format("#{@userprofile.phonenumber4}")
   
   .userprofile-show__insured-card
     .userprofile-show__insured-card--title
