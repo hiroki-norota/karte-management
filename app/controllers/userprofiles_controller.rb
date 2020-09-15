@@ -58,7 +58,8 @@ class UserprofilesController < ApplicationController
       :burden,
       :insurer_number,
       :remarks        
-    )
+    ).merge(
+      user_id: current_user.id)
   end
 
 end
